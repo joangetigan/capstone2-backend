@@ -1,0 +1,251 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color: #20828D;
+}
+
+/*navbar*/
+.navbar-default .navbar-brand {
+	font-family: 'Cutive Mono', monospace;	
+	font-size: 36px;
+	letter-spacing: 8px;
+	color: #20828D;
+}
+.navbar>.container .navbar-brand {
+	margin-left: 0px;
+}
+.navbar-default {
+	background-color: white;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:visited {
+	color: #20828D;
+}
+.col-md-2,
+.col-md-8 {
+	text-align: center;
+}
+.navbar-right {
+	margin-right: 0;
+}
+button {
+	color: #20828D;
+	font-size: 1em;
+	background-color: white;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: none;
+	border: 1px solid #20828D;
+	padding: 5px;
+	width: 100%;
+}
+.navs {
+	margin-top: 7px;
+}
+.navs a:hover {
+	text-decoration: none;
+	color: #20828D;
+}
+button:hover {
+	color: white;
+	background-color: #20828D;
+	text-decoration: none;
+}
+
+/*dropLogin*/
+.form-login {
+	padding: 20px;	
+}
+.form-login li {
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-login label {
+	margin: 0 0 3px 0;
+	font-weight: normal;
+}
+.form-login input[type=text], 
+.form-login input[type=password] {
+	box-sizing: border-box;
+	border: 1px solid #20828D;
+	border-radius: 5px;
+	padding: 7px;
+	transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+.form-login input[type=text]:focus, 
+.form-login input[type=password]:focus {
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-login input[type=submit] {
+	background: #20828D;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+}
+.form-login input[type=submit]:hover,
+.signup:hover {
+	background: #4691A4;
+	box-shadow: none;
+}
+
+/*register*/
+.form-signup {
+	text-align: left;
+	margin:10px auto;
+	max-width: 600px;
+	padding: 20px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-signup li {
+	padding: 0;
+	display: block;
+	list-style: none;
+	margin: 10px 0 0 0;
+}
+.form-signup label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.form-signup input[type=text], 
+.form-signup input[type=password],
+.form-signup input[type=email] {
+	box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+.form-signup input[type=text]:focus, 
+.form-signup input[type=password]:focus,
+.form-signup input[type=email]:focus {
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.form-signup input[type=submit] {
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.form-signup input[type=submit]:hover {
+	background: #4691A4;
+	box-shadow:none;
+}
+.form-signup .required{
+	color:red;
+}
+
+/*content*/
+.content {
+	text-align: center;
+	margin-top: 50px;
+}
+.bestseller {
+	margin-bottom: 40px;
+}
+.book {
+	clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+	width: 180px;
+	transition-property: width;
+	transition-duration: 0.5s;
+}
+.book:hover {
+    width: 200px;
+}
+.signup {
+	width: 30%;
+	color: white;
+	background-color: #20828D;
+	text-decoration: none;
+}
+.social {
+	margin-top: 20px;
+}
+.icon {
+	width: 30px;
+	height: 30px;
+}
+table {
+	text-align: left;
+}
+.action {
+	margin-top: 0;
+	padding: 0;
+}
+.divide {
+	column-count: 2;
+	column-gap: 40px;
+}
+.memberpage {
+	text-align: left;
+}
+
+/*sidenav*/
+.sidenav {
+    height: 100%; 
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 30px;
+    transition: 0.5s;
+}
+.sidenav h3,
+.sidenav h4 {
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	transition: 0.3s;
+}
+input[type=radio] {
+	margin-left: 20px;
+	transition: 0.3s;
+}
+.search_outer {
+	border: 1px solid #c2cdec;
+    border-radius: 4px;
+    margin: 0 20px;
+    height: 40px;
+	transition: 0.3s;
+}
+.search_input {
+	box-sizing: border-box;
+    background: transparent;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 30px;
+    padding-left: 7px;
+	transition: 0.3s;
+}
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    border: none;
+    width: 30px;
+    padding: 0;
+}
+.see_all {
+	width: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 20px;
+	transition: 0.3s;
+}
