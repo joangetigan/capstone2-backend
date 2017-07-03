@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <title>The Arabian Nights | The Arabian Nights</title>
+      <link rel="stylesheet" href="css/book.css" type="text/css"/>
+      <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="EPB-UUID" content="36e03bc6-bfb9-4306-bbe0-a9f1cbff75a9"/>
+   </head>
+   <body>
+      <div class="body">
+         <div id="epigraph">
+            <h3 class="chapter-title">The Arabian Nights</h3>
+            <blockquote>
+               <div class="line-group">When the breeze of a joyful dawn blew free<br/>In the silken sail of infancy,<br/>The tide of time flow'd back with me,<br/>The forward&#8211;flowing time of time;<br/>And many a sheeny summer morn,<br/>Adown the Tigris I was borne,<br/>By Bagdat's shrines of fretted gold,<br/>High&#8211;walled gardens green and old;<br/>True Mussulman was I and sworn,<br/>For it was in the golden prime<br/>Of good Haroun Alraschid.</div>
+               <div class="line-group">Anight my shallop, rustling thro'<br/>The low and bloomèd foliage, drove<br/>The fragrant, glistening deeps, and clove<br/>The citron&#8211;shadows in the blue:<br/>By garden porches on the brim,<br/>The costly doors flung open wide,<br/>Gold glittering thro' lamplight dim,<br/>And broider'd sofas on each side:<br/>In sooth it was a goodly time,<br/>For it was in the golden prime<br/>Of good Haroun Alraschid.</div>
+            </blockquote>
+            <p class="signed">ALFRED, LORD TENNYSON.</p>
+         </div>
+      </div>
+   </body>
+</html>

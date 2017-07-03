@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="EPB-UUID" version="2.0">
+   <metadata xmlns:opf="http://www.idpf.org/2007/opf"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <dc:title>The Arabian Nights</dc:title>
+      <dc:creator opf:role="aut" opf:file-as="Anonymous">Anonymous</dc:creator>
+      <dc:date opf:event="original-publication">1909</dc:date>
+      <dc:publisher>epubBooks (www.epubbooks.com)</dc:publisher>
+      <dc:date opf:event="epub-publication">2009-11-24</dc:date>
+      <dc:subject>Folklore</dc:subject>
+      <dc:subject>Fairy Tales</dc:subject>
+      <dc:source>Project Gutenberg</dc:source>
+      <dc:rights>
+            Provided for free by epubBooks.com. Not for commercial use.
+            This EPUB eBook is released under a Creative Commons (BY-NC-ND/3.0) Licence.
+            Source text and images are in the Public Domain.
+      </dc:rights>
+      <dc:identifier id="EPB-UUID">urn:uuid:36e03bc6-bfb9-4306-bbe0-a9f1cbff75a9</dc:identifier>
+      <dc:language>en</dc:language>
+   </metadata>
+   <manifest>
+      <!-- Content Documents -->
+      <item id="titlepage" href="title.xml" media-type="application/xhtml+xml"/>
+      <item id="epubbooksinfo" href="epubbooksinfo.xml" media-type="application/xhtml+xml"/>
+      <item id="preface" href="preface.xml" media-type="application/xhtml+xml"/>
+      <item id="epigraph" href="epigraph.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-001" href="chapter-001.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-002" href="chapter-002.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-003" href="chapter-003.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-004" href="chapter-004.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-005" href="chapter-005.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-006" href="chapter-006.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-007" href="chapter-007.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-008" href="chapter-008.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-009" href="chapter-009.xml" media-type="application/xhtml+xml"/>
+      <item id="chapter-010" href="chapter-010.xml" media-type="application/xhtml+xml"/>
+      <item id="section-011" href="section-011.xml" media-type="application/xhtml+xml"/>
+      <item id="section-012" href="section-012.xml" media-type="application/xhtml+xml"/>
+      <item id="section-013" href="section-013.xml" media-type="application/xhtml+xml"/>
+      <item id="section-014" href="section-014.xml" media-type="application/xhtml+xml"/>
+      <item id="section-015" href="section-015.xml" media-type="application/xhtml+xml"/>
+      <item id="section-016" href="section-016.xml" media-type="application/xhtml+xml"/>
+      <item id="section-017" href="section-017.xml" media-type="application/xhtml+xml"/>
+            
+      <!-- CSS Style Sheets -->
+      <item id="main-css" href="css/book.css" media-type="text/css"/>
+            
+      <!-- Images -->
+      <item id="epubbooks-logo" href="images/epubbooks-logo.png" media-type="image/png"/>
+              
+      <!-- NCX -->
+      <item id="ncx" href="epb.ncx" media-type="application/x-dtbncx+xml"/>
+   </manifest>
+   <spine toc="ncx">
+      <itemref idref="titlepage" linear="yes"/>
+      <itemref idref="epubbooksinfo" linear="yes"/>
+      <itemref idref="preface" linear="yes"/>
+      <itemref idref="epigraph" linear="yes"/>
+      <itemref idref="chapter-001" linear="yes"/>
+      <itemref idref="chapter-002" linear="yes"/>
+      <itemref idref="chapter-003" linear="yes"/>
+      <itemref idref="chapter-004" linear="yes"/>
+      <itemref idref="chapter-005" linear="yes"/>
+      <itemref idref="chapter-006" linear="yes"/>
+      <itemref idref="chapter-007" linear="yes"/>
+      <itemref idref="chapter-008" linear="yes"/>
+      <itemref idref="chapter-009" linear="yes"/>
+      <itemref idref="chapter-010" linear="yes"/>
+      <itemref idref="section-011" linear="yes"/>
+      <itemref idref="section-012" linear="yes"/>
+      <itemref idref="section-013" linear="yes"/>
+      <itemref idref="section-014" linear="yes"/>
+      <itemref idref="section-015" linear="yes"/>
+      <itemref idref="section-016" linear="yes"/>
+      <itemref idref="section-017" linear="yes"/>
+   </spine>
+</package>

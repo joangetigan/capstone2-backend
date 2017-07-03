@@ -8,9 +8,7 @@ function get_title() {
 function display_content() {
 	echo '
 	<h2 style="margin-bottom:40px">Welcome back, '.$_SESSION['firstname'].'.</h2>
-
-	<h4 class="memberpage">Titles you\'ve saved.</h4>
-	<div class="divide">';
+	<h4 class="memberpage">Titles you\'ve saved.</h4>';
 
 	require 'connection.php';
 	$id = $_SESSION['id'];
@@ -28,7 +26,6 @@ function display_content() {
 			echo "</div>";
 		}
 	}
-	echo '</div>';
 }
 
 

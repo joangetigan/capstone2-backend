@@ -18,8 +18,7 @@ function get_title() {
 
 function display_content() {
 	echo '<h2 style="margin-bottom:20px">Browse Items</h2>
-		<h3 style="margin-bottom:30px">Search Results</h3>			
-		<div class="triple">';
+		<h3 style="margin-bottom:30px">Search Results</h3>';
 
 	require 'connection.php';
 
@@ -88,7 +87,6 @@ function display_content() {
 			}
 		}
 	}
-	echo '</div>';
 }
 
 ?>
