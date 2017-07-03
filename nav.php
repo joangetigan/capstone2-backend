@@ -10,9 +10,9 @@ require_once 'login.php';
                 <div id="mySidenav" class="sidenav">
                     <button class="closebtn">&times;</button>
                     <h3>BOOK<br>MUSKETEERS</h3>
-                    <form method="POST">
+                    <form method="POST" action="browse.php">
                         <h4>BROWSE BY</h4>
-                        <input type="radio" name="select" value="author" checked> Author<br>
+                        <input type="radio" name="select" value="author"> Author<br>
                         <input type="radio" name="select" value="title"> Title<br><br>
                         <div class="search_outer">
                             <input type="text" class="search_input" placeholder="Search" name="query" autocomplete="off" aria-label="Search">
@@ -20,14 +20,19 @@ require_once 'login.php';
                         <span class='form-signup'><input type='submit' name='browse' value='Submit'></span>
                     </form>
                     <hr>
-                    <form method="POST">
+                    <form method="POST" action="browse.php">
                         <h4>BROWSE BY</h4>
-                        <input type="radio" name="select" value="fiction" checked> Fiction<br>
-                        <input type="radio" name="select" value="nonfic"> Non-fiction<br><br>
+                        <input type="radio" name="choose" value="fiction"> Fiction<br>
+                        <input type="radio" name="choose" value="nonfic"> Non-fiction<br><br>
                         <span class='form-signup'><input type='submit' name='type' value='Submit'></span>
+                        <hr>
+                        <button class="see-all" name="see-all">SEE ALL TITLES</button>
                     </form>
-                    <hr>
-                    <button class="see_all">SEE ALL TITLES</button>
+                    <div class='nav-social'>
+                        <img src='images/facebook.png' alt='facebook' class='icon'>
+                        <img src='images/twitter.png' alt='twitter' class='icon'>
+                        <img src='images/pinterest.png' alt='pinterest' class='icon'>
+                    </div>
                 </div>
 
                 <!-- brand -->

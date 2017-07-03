@@ -32,7 +32,7 @@ button {
 	color: #20828D;
 	font-size: 1em;
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 4px;
 	text-align: center;
 	box-shadow: none;
 	border: 1px solid #20828D;
@@ -113,7 +113,8 @@ button:hover {
 }
 .form-signup input[type=text], 
 .form-signup input[type=password],
-.form-signup input[type=email] {
+.form-signup input[type=email],
+.form-signup textarea {
 	box-sizing: border-box;
 	border:1px solid #BEBEBE;
 	padding: 7px;
@@ -123,7 +124,8 @@ button:hover {
 }
 .form-signup input[type=text]:focus, 
 .form-signup input[type=password]:focus,
-.form-signup input[type=email]:focus {
+.form-signup input[type=email]:focus,
+.form-signup textarea:focus {
 	box-shadow: 0 0 8px #88D5E9;
 	border: 1px solid #88D5E9;
 }
@@ -182,8 +184,16 @@ table {
 	column-count: 2;
 	column-gap: 40px;
 }
+.triple {
+	column-count: 3;
+	column-gap: 40px;	
+}
 .memberpage {
 	text-align: left;
+}
+.cover {
+	width: 144px;
+	height: 192px;
 }
 
 /*sidenav*/
@@ -196,7 +206,7 @@ table {
     left: 0;
     background-color: white;
     overflow-x: hidden;
-    padding-top: 30px;
+    padding-top: 20px;
     transition: 0.5s;
 }
 .sidenav h3,
@@ -242,10 +252,19 @@ input[type=radio] {
     width: 30px;
     padding: 0;
 }
-.see_all {
+.see-all {
 	width: auto;
 	padding-left: 20px;
 	padding-right: 20px;
 	margin-left: 20px;
+	margin-bottom: 20px;
 	transition: 0.3s;
+}
+.user-action {
+	width: auto;
+	padding: 0 10px;
+}
+.nav-social {
+	margin-left: 20px;
+	transition: 0.3s;	
 }

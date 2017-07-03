@@ -2,7 +2,7 @@
 require 'connection.php'; 
 
 if(isset($_SESSION['is_admin'])) {
-	echo "<br><a href='adminPage.php'><button>Admin Page</button></a><br><br>";
+	echo "<br><a href='adminPage.php'><button style='margin-bottom:5px'>Admin Page</button></a>";
 		
 	$set = "SELECT DISTINCT status FROM users";
 	$select = mysqli_query($connect,$set);
@@ -18,16 +18,25 @@ if(isset($_SESSION['is_admin'])) {
 				echo "<option value='$status'>".$status."</option>";
 				}
 			}
-		echo "</select>";
-		echo "<span class='form-signup'><input type='submit' name='submit' value='Sort'></span>";		
+		echo "</select>&nbsp";
+		echo "<input type='submit' name='submit' value='Sort'>";
 	echo "</form>";
 }
 
 if(isset($_SESSION['is_logged_in'])) {
-	echo "
-	<h3>Newly Added Titles</h3>
-	
-	";
+	echo "<br><a href='addbook.php'><button>Add Book</button></a><br>";
+
+	echo "<h3>Newly Added Titles</h3>";
+	$new = "SELECT * FROM books b JOIN users u ON (b.ebook=u.ebook) ORDER BY date DESC LIMIT 2";
+	$result = mysqli_query($connect,$new);
+	while ($row=mysqli_fetch_assoc($result)) {
+		extract($row);
+		echo "<div>";
+		echo '<img src="'.$cover.'" class="cover"><br>';
+		echo $title.'<br>';
+		echo 'by '.$author.'<br>';
+		echo "</div><br>";
+	}
 
 } else {
 	echo "
@@ -36,7 +45,7 @@ if(isset($_SESSION['is_logged_in'])) {
 	<p>TOM CLANCY:<br>POINT OF CONTACT<br>by Mike Maden</p>
 	<p>COME SUNDOWN<br>by Nora Roberts</p>
 	<p>THE HANDMAID'S TALE<br>by Margaret Atwood</p>
-	<p>INTO THE WATER<br>by Paula Hawkins</p><br>
+	<p>DANGEROUS MINDS<br>by Janet Evanovich</p><br>
 	<a href='register.php'><button>SHARE AND READ</button></a>
 
 	<div class='social'>
