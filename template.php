@@ -20,6 +20,10 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- sweet alerts -->
+    <script src="dist/sweetalert.js"></script>
+    <link rel="stylesheet" href="dist/sweetalert.css">
 </head>
     
 <body>
