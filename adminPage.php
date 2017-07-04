@@ -15,16 +15,16 @@ if(!isset($_SESSION['is_admin'])) {
 	if(!isset($_POST['submit']) && !isset($_POST['approve'])) {
 		$_SESSION['status_filter'] = 'All';
 	}
-	if (isset($_POST['approve'])) {
-		$id = $_GET['id'];
-		$approve = "UPDATE users SET status='APPROVED', date=date WHERE id='$id'"; 
-		mysqli_query($connect,$approve);
-	}
-	if (isset($_POST['delete'])) {
-		$id = $_GET['id'];
-		$delete = "DELETE FROM users WHERE id='$id'"; 
-		mysqli_query($connect,$delete);
-	}
+	// if (isset($_POST['approve'])) {
+	// 	$id = $_GET['id'];
+	// 	$approve = "UPDATE users SET status='APPROVED', date=date WHERE id='$id'"; 
+	// 	mysqli_query($connect,$approve);
+	// }
+	// if (isset($_POST['delete'])) {
+	// 	$id = $_GET['id'];
+	// 	$delete = "DELETE FROM users WHERE id='$id'"; 
+	// 	mysqli_query($connect,$delete);
+	// }
 
 		echo '<h3>MASTER LIST</h3>';
 		$sql = "SELECT * FROM users ORDER BY date";
@@ -61,14 +61,15 @@ if(!isset($_SESSION['is_admin'])) {
 						} else {
 							echo '<td>'.$status.'</td>';
 						}
-						echo '<td><form method=POST action="adminPage.php?id='.$id.'">';
+						echo '<td>';
+						// echo '<td><form method=POST action="adminPage.php?id='.$id.'">';
 							if ($status=='PENDING') {
-								echo '<button class="action btn-success" name="approve" id="approve">Approve</button>';
+								echo "<button class='action btn-success' name='approve' id='$id' onclick='approve(this.id)'>Approve</button>";
 							} else {
-								echo '<button class="action btn-danger" name="delete">Delete</button>';
+								echo "<button class='action btn-danger' name='delete' id='$id' onclick='delete(this.id)'>Delete</button>";
 							}
-						echo '</form>
-						</td>
+						// echo '</form>
+						echo '</td>
 					</tr>';
 				}
 			}
@@ -77,12 +78,48 @@ if(!isset($_SESSION['is_admin'])) {
 	}
 }
 
-
 ?>
 
+
 <script>
-$("#approve").click(function(){
-	swal("Approved!", "", "success");
-	
-});
+function approve(id){
+    $.post("approve.php?id="+id,
+    {
+    
+    },
+    function(data, status){
+    	swal({
+			title: "Approved!",
+			// text: "Log out to see summary of orders :)",
+			type: "success",
+			// showCancelButton: false,
+			closeOnConfirm: true,
+			// showLoaderOnConfirm: false,
+	    },
+	    function(){
+			location.reload();
+	    });
+	});
+}
+
+function delete(id){
+    $.post("delete.php?id="+id,
+    {
+    
+    },
+    function(data, status){
+		swal({
+			title: "Are you sure?",
+			text: "Your will not be able to recover this imaginary file!",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonClass: "btn-danger",
+			confirmButtonText: "Yes, delete it!",
+			closeOnConfirm: false
+		},
+		function(){
+			swal("Deleted!", "Your imaginary file has been deleted.", "success");
+		});
+	});
+}
 </script>

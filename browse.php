@@ -43,7 +43,7 @@ function display_content() {
 				echo "<div class='col-md-6 left'>";
 				echo '<span class="title">'.$title.'</span><br>';
 				echo '<span class="author">by '.$author.'</span><br><br>';
-				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+				echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
 				echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
 				echo "</div><br>";
 			}
@@ -70,7 +70,7 @@ function display_content() {
 				echo "<div class='col-md-6 left'>";
 				echo '<span class="title">'.$title.'</span><br>';
 				echo '<span class="author">by '.$author.'</span><br><br>';
-				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+				echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
 				echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
 				echo "</div><br>";
 			}
@@ -91,7 +91,7 @@ function display_content() {
 				echo "<div class='col-md-6 left'>";
 				echo '<span class="title">'.$title.'</span><br>';
 				echo '<span class="author">by '.$author.'</span><br><br>';
-				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+				echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
 				echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
 				echo "</div><br>";
 			}
@@ -104,13 +104,23 @@ function display_content() {
 
 <script>
 function savebook(id){
-    $.post("savebook.php?id="+id),
+    $.post("savebook.php?id="+id,
     {
     
     },
     function(data, status){
-       
-    };
-};
+    	swal({
+			title: "Saved!",
+			text: "Go to Saved Items to Read :)",
+			type: "success",
+			// showCancelButton: false,
+			closeOnConfirm: true,
+			// showLoaderOnConfirm: false,
+	    },
+	    function(){
+			location.reload();
+	    });
+	});
+}
 
 </script>

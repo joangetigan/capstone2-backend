@@ -23,11 +23,36 @@ function display_content() {
 			echo "<div class='col-md-6 left'>";
 			echo '<span class="title">'.$title.'</span><br>';
 			echo '<span class="author">by '.$author.'</span><br><br>';
-			echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+			echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br>";
+			echo "<button name='remove' id='$book_id' onclick='removebook(this.id)' class='user-action'>Remove from Saved</button><br><br></div>";
 			echo "</div><br>";
 		}
 	}
 }
 
-
 ?>
+
+
+<script>
+function removebook(id){
+    $.post("removebook.php?id="+id,
+    {
+    
+    },
+    function(data, status){
+    	swal({
+			title: "Removed from Saved Items",
+			// text: "Log out to see summary of orders :)",
+			type: "success",
+			// showCancelButton: false,
+			closeOnConfirm: true,
+			// showLoaderOnConfirm: false,
+	    },
+	    function(){
+			location.reload();
+	    });
+	});
+}
+
+</script>
+
