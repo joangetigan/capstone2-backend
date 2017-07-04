@@ -34,7 +34,7 @@ if(isset($_SESSION['is_logged_in'])) {
 		echo "<div>";
 		echo '<img src="'.$cover.'" class="cover"><br>';
 		echo $title.'<br>';
-		echo 'by '.$author.'<br>';
+		echo '<span class="author">by '.$author.'</span><br>';
 		echo "</div><br>";
 	}
 

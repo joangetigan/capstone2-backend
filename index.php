@@ -7,11 +7,11 @@ function display_content() {
 	echo '
 	<h2>New York Times Best Sellers</h2>
     <div class="bestseller">
-        <img src="images/ebook1.jpg" alt="ebook1" class="book">
-        <img src="images/ebook2.jpg" alt="ebook2" class="book">
-        <img src="images/ebook3.jpg" alt="ebook3" class="book">
-        <img src="images/ebook4.jpg" alt="ebook4" class="book">
-        <img src="images/ebook5.jpg" alt="ebook5" class="book">
+        <img src="images/camino.jpg" alt="camino" class="book">
+        <img src="images/franken.jpg" alt="franken" class="book">
+        <img src="images/hidden.jpg" alt="hidden" class="book">
+        <img src="images/zookeeper.jpg" alt="zookeeper" class="book">
+        <img src="images/identical.jpg" alt="identical" class="book">
     </div>
     <h2>One book for all. All books for one</h2>
     <h4>NO membership fee.</h4>

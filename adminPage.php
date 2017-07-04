@@ -1,4 +1,6 @@
 <?php 
+require_once 'template.php';
+
 function get_title() {
 	echo "Admin Page - Book Musketeers";
 }
@@ -28,7 +30,7 @@ if(!isset($_SESSION['is_admin'])) {
 		$sql = "SELECT * FROM users ORDER BY date";
 		$result = mysqli_query($connect,$sql);
 				echo '
-				<table class="table table-hover">
+				<table class="table table-hover left">
 					<tr>
 						<th><h4>Id</h4></th>
 						<th><h4>First_Name</h4></th>
@@ -61,9 +63,9 @@ if(!isset($_SESSION['is_admin'])) {
 						}
 						echo '<td><form method=POST action="adminPage.php?id='.$id.'">';
 							if ($status=='PENDING') {
-								echo '<button class="action" name="approve">Approve</button>';
+								echo '<button class="action btn-success" name="approve" id="approve">Approve</button>';
 							} else {
-								echo '<button class="action" name="delete">Delete</button>';
+								echo '<button class="action btn-danger" name="delete">Delete</button>';
 							}
 						echo '</form>
 						</td>
@@ -75,6 +77,12 @@ if(!isset($_SESSION['is_admin'])) {
 	}
 }
 
-require_once 'template.php';
 
 ?>
+
+<script>
+$("#approve").click(function(){
+	swal("Approved!", "", "success");
+	
+});
+</script>

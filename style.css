@@ -144,9 +144,25 @@ button:hover {
 }
 
 /*content*/
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
 .content {
 	text-align: center;
 	margin-top: 50px;
+}
+.divide {
+	column-count: 2;
+	column-gap: 40px;
+}
+.title {
+	font-size: 24px;
+}
+.author {
+	font-size: 14px;
 }
 .bestseller {
 	margin-bottom: 40px;
@@ -173,23 +189,9 @@ button:hover {
 	width: 30px;
 	height: 30px;
 }
-table {
-	text-align: left;
-}
 .action {
 	margin-top: 0;
 	padding: 0;
-}
-.divide {
-	column-count: 2;
-	column-gap: 40px;
-}
-.triple {
-	column-count: 3;
-	column-gap: 40px;	
-}
-.memberpage {
-	text-align: left;
 }
 .cover {
 	width: 144px;
@@ -263,6 +265,8 @@ input[type=radio] {
 .user-action {
 	width: auto;
 	padding: 0 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
 }
 .nav-social {
 	margin-left: 20px;

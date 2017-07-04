@@ -36,15 +36,19 @@ function display_content() {
 
 		if (mysqli_num_rows($result)>0) {
 			while ($row=mysqli_fetch_assoc($result)) {
+				echo "<div class='row'>";
 				extract($row);
-				echo "<div>";
-				echo '<img src="'.$cover.'" class="cover"><br>';
-				echo $title.'<br>';
-				echo 'by '.$author.'<br>';
-				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save</button>&nbsp&nbsp";
-				echo "<a href='read.php'><button class='user-action'>Read Now</button></a><br><br>";
-				echo "</div>";
+				echo "<div class='col-md-6 right'>";
+				echo '<img src="'.$cover.'" class="cover"><br></div>';
+				echo "<div class='col-md-6 left'>";
+				echo '<span class="title">'.$title.'</span><br>';
+				echo '<span class="author">by '.$author.'</span><br><br>';
+				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+				echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+				echo "</div><br>";
 			}
+		} else {
+			echo "No results found.";
 		}
 	} else if (isset($_GET['choose'])) {
 		$choose = $_GET['choose'];
@@ -59,15 +63,19 @@ function display_content() {
 
 		if (mysqli_num_rows($result)>0) {
 			while ($row=mysqli_fetch_assoc($result)) {
+				echo "<div class='row'>";
 				extract($row);
-				echo "<div>";
-				echo '<img src="'.$cover.'" class="cover"><br>';
-				echo $title.'<br>';
-				echo 'by '.$author.'<br>';
-				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save</button>&nbsp&nbsp";
-				echo "<a href='read.php'><button class='user-action'>Read Now</button></a><br><br>";
-				echo "</div>";
+				echo "<div class='col-md-6 right'>";
+				echo '<img src="'.$cover.'" class="cover"><br></div>';
+				echo "<div class='col-md-6 left'>";
+				echo '<span class="title">'.$title.'</span><br>';
+				echo '<span class="author">by '.$author.'</span><br><br>';
+				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+				echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+				echo "</div><br>";
 			}
+		} else {
+			echo "No results found.";
 		}
 	} else if (isset($_POST['see-all'])) {
 		$sql = "SELECT * FROM books";
@@ -76,14 +84,16 @@ function display_content() {
 
 		if (mysqli_num_rows($result)>0) {
 			while ($row=mysqli_fetch_assoc($result)) {
+				echo "<div class='row'>";
 				extract($row);
-				echo "<div>";
-				echo '<img src="'.$cover.'" class="cover"><br>';
-				echo $title.'<br>';
-				echo 'by '.$author.'<br>';
-				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save</button>&nbsp&nbsp";
-				echo "<a href='read.php'><button class='user-action'>Read Now</button></a><br><br>";
-				echo "</div>";
+				echo "<div class='col-md-6 right'>";
+				echo '<img src="'.$cover.'" class="cover"><br></div>';
+				echo "<div class='col-md-6 left'>";
+				echo '<span class="title">'.$title.'</span><br>';
+				echo '<span class="author">by '.$author.'</span><br><br>';
+				echo "<button name='save' value='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+				echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+				echo "</div><br>";
 			}
 		}
 	}
