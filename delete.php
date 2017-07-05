@@ -2,7 +2,7 @@
 require 'connection.php';
 session_start();
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 
 $delete = "DELETE FROM users WHERE id='$id'"; 
 

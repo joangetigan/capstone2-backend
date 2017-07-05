@@ -73,7 +73,7 @@ function display_content() {
 
 	    <li><label>Retype Password<span class="required">*</span></label><input type="password" name="retype" required></li>
 
-	    <li><label>Email<span class="required">*</span></label><input type="email" name="email" required><br><span id="validate" autocomplete="off"></span></li><br><br><br>
+	    <li><label>Email<span class="required">*</span></label><input type="email" name="email" required></li><br><br><br>
 
 	    <hr>
 

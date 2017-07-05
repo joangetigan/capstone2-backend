@@ -39,6 +39,9 @@ button {
 	padding: 5px;
 	width: 100%;
 }
+.cancel {
+	width: auto;
+}
 .navs {
 	margin-top: 7px;
 }
