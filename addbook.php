@@ -34,7 +34,7 @@ function display_content() {
 		VALUES('$id','$book')";
 		mysqli_query($connect,$list);
 
-		$message = "Book added successfully.<br>Thank you.";
+		$message = "Book added successfully.<br>Thank you for sharing :)";
 	}
 
 	echo '

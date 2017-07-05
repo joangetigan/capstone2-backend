@@ -113,9 +113,7 @@ function savebook(id){
 			title: "Saved!",
 			text: "Go to Saved Items to Read :)",
 			type: "success",
-			// showCancelButton: false,
 			closeOnConfirm: true,
-			// showLoaderOnConfirm: false,
 	    },
 	    function(){
 			location.reload();

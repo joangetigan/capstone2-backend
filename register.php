@@ -1,4 +1,9 @@
 <?php
+function get_title() {
+	echo "Sign Up - Book Musketeers";
+}
+
+function display_content() {
 require 'connection.php';
 $message = '';
 
@@ -54,13 +59,6 @@ if (isset($_POST['register'])) {
 
 }
 
-
-function get_title() {
-	echo "Sign Up - Book Musketeers";
-}
-
-function display_content() {
-	global $message;
 	echo '
 	<form method="POST" enctype="multipart/form-data">
 	<h2>Signup, Share and Read</h2>

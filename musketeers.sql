@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2017 at 02:00 PM
+-- Generation Time: Jul 05, 2017 at 01:03 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -33,7 +33,6 @@ CREATE TABLE `books` (
   `cover` varchar(255) DEFAULT NULL,
   `author` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `description` varchar(255) DEFAULT NULL,
   `ebook` varchar(255) NOT NULL,
   `category` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -42,16 +41,16 @@ CREATE TABLE `books` (
 -- Dumping data for table `books`
 --
 
-INSERT INTO `books` (`id`, `cover`, `author`, `title`, `description`, `ebook`, `category`) VALUES
-(1, 'images/astro.jpg', 'Neil deGrasse Tyson', 'Astrophysics for People in a Hurry', NULL, 'astro.epub', 'non-fiction'),
-(2, 'images/cabin.jpg', 'Ruth Ware', 'The Woman in Cabin 10', NULL, 'cabin.epub', 'fiction'),
-(3, 'images/camino.jpg', 'John Grisham', 'Camino Island', NULL, 'camino.epub', 'fiction'),
-(4, 'images/franken.jpg', 'Al Franken', 'Al Franken, Giant of the Senate', NULL, 'franken.epub', 'non-fiction'),
-(5, 'images/hidden.jpg', 'Margot Lee Shetterly', 'Hidden Figures', NULL, 'hidden.epub', 'non-fiction'),
-(6, 'images/identical.jpg', 'Elin Hilderbrand', 'The Identicals', NULL, 'identical.epub', 'fiction'),
-(7, 'images/intowater.jpg', 'Paula Hawkins', 'Into the Water', NULL, 'intowater.epub', 'fiction'),
-(8, 'images/lilac.jpg', 'Martha Hall Kelly', 'Lilac Girls', NULL, 'lilac.epub', 'fiction'),
-(9, 'images/zookeeper.jpg', 'Diane Ackerman', 'The Zookeeper\'s Wife', NULL, 'zookeeper.epub', 'non-fiction');
+INSERT INTO `books` (`id`, `cover`, `author`, `title`, `ebook`, `category`) VALUES
+(1, 'images/astro.jpg', 'Neil deGrasse Tyson', 'Astrophysics for People in a Hurry', 'astro.epub', 'non-fiction'),
+(2, 'images/cabin.jpg', 'Ruth Ware', 'The Woman in Cabin 10', 'cabin.epub', 'fiction'),
+(3, 'images/camino.jpg', 'John Grisham', 'Camino Island', 'camino.epub', 'fiction'),
+(4, 'images/franken.jpg', 'Al Franken', 'Al Franken, Giant of the Senate', 'franken.epub', 'non-fiction'),
+(5, 'images/hidden.jpg', 'Margot Lee Shetterly', 'Hidden Figures', 'hidden.epub', 'non-fiction'),
+(6, 'images/identical.jpg', 'Elin Hilderbrand', 'The Identicals', 'identical.epub', 'fiction'),
+(7, 'images/intowater.jpg', 'Paula Hawkins', 'Into the Water', 'intowater.epub', 'fiction'),
+(8, 'images/lilac.jpg', 'Martha Hall Kelly', 'Lilac Girls', 'lilac.epub', 'fiction'),
+(9, 'images/zookeeper.jpg', 'Diane Ackerman', 'The Zookeeper\'s Wife', 'zookeeper.epub', 'non-fiction');
 
 -- --------------------------------------------------------
 
@@ -96,9 +95,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `username`, `password`, `email`, `role`, `ebook`, `date`, `status`) VALUES
-(36, 'Joan', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'jtgetigan@gmail.com', 'admin', 'astro.epub', '2017-07-01 08:18:26', 'APPROVED'),
+(36, 'Joan', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'jan@gmail.com', 'admin', 'astro.epub', '2017-07-01 08:18:26', 'APPROVED'),
 (37, 'Shane', 'shane', 'a9993e364706816aba3e25717850c26c9cd0d89d', 'jtgetigan@gmail.com', 'regular', 'cabin.epub', '2017-07-01 08:30:44', 'APPROVED'),
-(38, 'Emman', 'emman', 'a9993e364706816aba3e25717850c26c9cd0d89d', 'jtgetigan@gmail.com', 'regular', 'camino.epub', '2017-07-01 08:39:18', 'PENDING'),
+(38, 'Emman', 'emman', 'a9993e364706816aba3e25717850c26c9cd0d89d', 'jtgetigan@gmail.com', 'regular', 'camino.epub', '2017-07-01 08:39:18', 'APPROVED'),
 (39, 'Ruel', 'ruel', 'a9993e364706816aba3e25717850c26c9cd0d89d', 'jtgetigan@gmail.com', 'regular', 'franken.epub', '2017-07-01 08:41:45', 'PENDING'),
 (40, 'Darryl', 'darryl', 'a9993e364706816aba3e25717850c26c9cd0d89d', 'jtgetigan@gmail.com', 'regular', 'hidden.epub', '2017-07-01 08:43:24', 'PENDING'),
 (41, 'Kevin', 'kevin', 'a9993e364706816aba3e25717850c26c9cd0d89d', 'jtgetigan@gmail.com', 'regular', 'identical.epub', '2017-07-01 08:45:49', 'PENDING'),
