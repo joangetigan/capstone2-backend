@@ -18,9 +18,9 @@ function display_content() {
 		while ($row=mysqli_fetch_assoc($result)) {
 			echo "<div class='row'>";
 			extract($row);
-			echo "<div class='col-md-6 right'>";
+			echo "<div class='col-xs-6 right'>";
 			echo '<img src="'.$cover.'" class="cover"><br></div>';
-			echo "<div class='col-md-6 left'>";
+			echo "<div class='col-xs-6 left'>";
 			echo '<span class="title">'.$title.'</span><br>';
 			echo '<span class="author">by '.$author.'</span><br><br>';
 			echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br>";

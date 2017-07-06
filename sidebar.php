@@ -49,9 +49,9 @@ if(isset($_SESSION['is_logged_in'])) {
 	<a href='register.php'><button>SHARE AND READ</button></a>
 
 	<div class='social'>
-    	<img src='images/facebook.png' alt='facebook' class='icon'>
-    	<img src='images/twitter.png' alt='twitter' class='icon'>
-    	<img src='images/pinterest.png' alt='pinterest' class='icon'>
+    	<img src='images/facebook.jpg' alt='facebook' class='icon'>
+    	<img src='images/twitter.jpg' alt='twitter' class='icon'>
+    	<img src='images/pinterest.jpg' alt='pinterest' class='icon'>
 	</div>
 	";
 }

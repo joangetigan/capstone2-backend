@@ -53,8 +53,10 @@ if(!isset($_SESSION['is_admin'])) {
 					}
 					echo '<td>';
 					if ($status=='PENDING') {
-						echo "<button class='action btn-success' name='approve' id='$id' onclick='approve(this.id)'>Approve</button><br>";
+						echo "<button class='action mid btn-success' name='approve' id='$id' onclick='approve(this.id)'>Approve</button><br>";
+						echo "<button class='action btn-danger' name='delete' id='$id' onclick='erase(this.id)'>Delete</button>";
 					} else {
+						echo "<button class='action mid btn-default' name='pending' id='$id' onclick='pending(this.id)'>Pending</button><br>";
 						echo "<button class='action btn-danger' name='delete' id='$id' onclick='erase(this.id)'>Delete</button>";
 					}
 					echo '</td>
@@ -76,6 +78,21 @@ function approve(id){
     function(data, status){
     	swal({
 			title: "Approved!",
+			type: "success",
+			closeOnConfirm: true,
+	    },
+	    function(){
+			location.reload();
+	    });
+	});
+};
+
+function pending(id){
+    $.post("pending.php?id="+id,
+    {},
+    function(data, status){
+    	swal({
+			title: "Pending!",
 			type: "success",
 			closeOnConfirm: true,
 	    },

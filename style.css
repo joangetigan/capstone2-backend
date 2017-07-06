@@ -54,6 +54,22 @@ button:hover {
 	background-color: #20828D;
 	text-decoration: none;
 }
+.hidebtn {
+	display: none;
+}
+@media only screen and (max-width: 1000px) {
+	.navs {
+		display: none;
+	}
+	.navbar-default .navbar-brand {
+		letter-spacing: normal;
+	}
+	.hidebtn {
+		display: inline-block;
+		width: auto;
+		margin-top: 30px;
+	}
+}
 
 /*dropLogin*/
 .form-login {
@@ -153,13 +169,28 @@ button:hover {
 .right {
 	text-align: right;
 }
+@media only screen and (max-width: 400px) {
+	.right {
+		text-align: left;
+	}
+}
 .content {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 40px;
+}
+@media only screen and (max-width: 1000px) {
+	.content {
+		margin-top: auto;
+	}
 }
 .divide {
 	column-count: 2;
 	column-gap: 40px;
+}
+@media only screen and (max-width: 1000px) {
+	.divide {
+		column-count: 1;
+	}
 }
 .title {
 	font-size: 24px;
@@ -185,6 +216,11 @@ button:hover {
 	background-color: #20828D;
 	text-decoration: none;
 }
+@media only screen and (max-width: 1000px) {
+	.signup {
+		width: 100%;
+	}
+}
 .social {
 	margin-top: 20px;
 }
@@ -194,7 +230,10 @@ button:hover {
 }
 .action {
 	margin-top: 0;
-	padding: 0;
+	padding: 2px;
+}
+.mid {
+	margin-bottom: 3px;
 }
 .cover {
 	width: 144px;
