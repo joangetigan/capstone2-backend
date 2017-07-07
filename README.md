@@ -1,4 +1,4 @@
-Capstone 2
+Capstone 2 (Ebook Sharing Website)
 
 http://bookmusketeers.x10host.com/
 
