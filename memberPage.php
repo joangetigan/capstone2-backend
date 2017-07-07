@@ -23,7 +23,7 @@ function display_content() {
 			echo "<div class='col-xs-6 left'>";
 			echo '<span class="title">'.$title.'</span><br>';
 			echo '<span class="author">by '.$author.'</span><br><br>';
-			echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br>";
+			echo "<a href='read.php?title=".urlencode($title)."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br>";
 			echo "<button name='remove' id='$book_id' onclick='removebook(this.id)' class='user-action'>Remove from Saved</button><br><br></div>";
 			echo "</div><br>";
 		}
