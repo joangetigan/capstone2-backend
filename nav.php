@@ -115,9 +115,9 @@ require_once 'login.php';
             <button class="see-all" name="see-all">SEE ALL TITLES</button>
         </form>
         <div class='nav-social'>
-            <img src='images/facebook.png' alt='facebook' class='icon'>
-            <img src='images/twitter.png' alt='twitter' class='icon'>
-            <img src='images/pinterest.png' alt='pinterest' class='icon'>
+            <img src='images/facebook.jpg' alt='facebook' class='icon'>
+            <img src='images/twitter.jpg' alt='twitter' class='icon'>
+            <img src='images/pinterest.jpg' alt='pinterest' class='icon'>
         </div>
     </div>
 

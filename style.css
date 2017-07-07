@@ -70,6 +70,15 @@ button:hover {
 		margin-top: 30px;
 	}
 }
+@media only screen and (max-width: 375px) {
+	.navbar-default .navbar-brand {
+		height: auto;
+		text-align: left;
+	}
+	.hidebtn {
+		margin-top: 40px;
+	}
+}
 
 /*dropLogin*/
 .form-login {
