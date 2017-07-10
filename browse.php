@@ -43,8 +43,11 @@ function display_content() {
 				echo "<div class='col-xs-6 left'>";
 				echo '<span class="title">'.$title.'</span><br>';
 				echo '<span class="author">by '.$author.'</span><br><br>';
-				echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
-				echo "<a href='read.php?title=".urlencode($title)."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+				if(isset($_SESSION['is_logged_in'])) {
+					echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+					echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br>";
+				}
+				echo "</div>";
 				echo "</div><br>";
 			}
 		} else {
@@ -70,8 +73,11 @@ function display_content() {
 				echo "<div class='col-xs-6 left'>";
 				echo '<span class="title">'.$title.'</span><br>';
 				echo '<span class="author">by '.$author.'</span><br><br>';
-				echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
-				echo "<a href='read.php?title=".urlencode($title)."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+				if(isset($_SESSION['is_logged_in'])) {
+					echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+					echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br>";
+				}
+				echo "</div>";
 				echo "</div><br>";
 			}
 		} else {
@@ -91,8 +97,11 @@ function display_content() {
 				echo "<div class='col-xs-6 left'>";
 				echo '<span class="title">'.$title.'</span><br>';
 				echo '<span class="author">by '.$author.'</span><br><br>';
-				echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
-				echo "<a href='read.php?title=".urlencode($title)."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br></div>";
+				if(isset($_SESSION['is_logged_in'])) {
+					echo "<button name='save' id='$id' onclick='savebook(this.id)' class='user-action'>Save for Later</button><br>";
+					echo "<a href='read.php?title=".$title."&book=".$ebook."' target='block'><button class='user-action'>Read Now</button></a><br><br>";
+				}
+				echo "</div>";
 				echo "</div><br>";
 			}
 		}
