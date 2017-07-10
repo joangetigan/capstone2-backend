@@ -6,6 +6,9 @@ function get_title() {
 }
 
 function display_content() {
+if(!isset($_SESSION['is_logged_in'])) {
+	echo "<h4>You do not have permission to access this page.</h4>";
+} else {
 	echo '<h2 style="margin-bottom:20px">Welcome back, '.$_SESSION['firstname'].'.</h2>
 		<h4 style="margin-bottom:30px">Titles you\'ve saved.</h4>';
 
@@ -28,6 +31,7 @@ function display_content() {
 			echo "</div><br>";
 		}
 	}
+}
 }
 
 ?>
