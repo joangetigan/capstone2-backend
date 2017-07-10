@@ -14,7 +14,6 @@ function display_content() {
 
 	while ($row=mysqli_fetch_assoc($retrieve)) {
 		$checkpw = $row['password'];
-		$checkem = $row['email'];
 
 		if (isset($_POST['changepw'])) {
 			$oldpw = sha1($_POST['oldpw']);
@@ -42,7 +41,8 @@ function display_content() {
 			mysqli_query($connect,$update_em);
 
 			$message = "Email successfully changed.";
-			$em_display = $new_email;
+			$_SESSION['email'] = $new_email;
+			$em_display = $_SESSION['email'];
 		}
 	}
 
