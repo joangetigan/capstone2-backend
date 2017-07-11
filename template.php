@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Cutive+Mono" rel="stylesheet">
+    <link rel="icon" href="images/icon.png" type="image/png">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -14,7 +14,7 @@ if(!isset($_SESSION['is_logged_in'])) {
 
 	require 'connection.php';
 	$id = $_SESSION['id'];
-	$sql = "SELECT * FROM books b JOIN saved_books s ON (b.id=s.book_id) WHERE user_id='$id'";
+	$sql = "SELECT * FROM books b JOIN saved_books s ON (b.id=s.book_id) WHERE user_id='$id' GROUP BY s.book_id";
 	$result = mysqli_query($connect,$sql);
 
 	if (mysqli_num_rows($result)>0) {
